@@ -1,0 +1,76 @@
+
+<html> 
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css"/>
+		<title> Diary of a MK Girl </title> 
+			<script>
+				function banner(){ 
+					var text = confirm("Did You Really Want to Click on My Banner? This sends you to Google.com!"); 
+					return text; 
+				}
+				function answer(){
+					var radio = document.getElementsByName("soccer trivia");
+					var selection = false;
+					var message = "";
+					for( var i = 0; i < radio.length; i++) {
+					if(radio[i].value == "yes" && radio[i].checked == true) { 
+						selection = true; 
+					} //end if statement 
+					} //end for loop
+					if(selection == true) {
+						message = message + "<b><p style='color:green'>Way to go!  Spain = 1st place, Italy = 2nd place, Brazil = 3rd place, Argentina = 4th place</p></b>"; 
+					} else { 
+						message = message + "<b><p style='color:red'>Sorry!</p></b>"; 
+					}
+					document.getElementById("response").innerHTML = message;
+
+				}//end function answer
+			</script>
+	</head> 
+	<body id="background"> 
+		<a href="http://google.com" onclick="return banner()">
+			<header id"header"> Diary of a MK Girl</header>
+		</a>
+		<nav>
+			<ul id="navmenu">
+				<li class="navitem"> <a href="home.html"> Home </a> </li>
+				<li class="navitem"> <a href="about me.html"> About Me </a> </li>
+				<li class="navitem"> <a href="story index.html"> Story Index </a> </li>
+			</ul>
+		</nav>
+		<div id="rightside">
+			<img src="https://thumbs.dreamstime.com/z/global-world-map-network-technology-social-communications-d-illustration-89452803.jpg"/>
+			<audio width="400" height="220" controls autoplay>
+			<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+			</audio>
+			<img src="https://images.stockfreeimages.com/3155/sfi226w/31557494.jpg"/>
+		</div>
+		<div id="leftside">
+			<h1><span class="wrap-text"> May 27, 2018 </span></h1>
+			<p class="diaryentry">   <i>Welcome to my life.</i>  Hi, I'm Ali.  I'm sitting at my desk right now, listening to the music from the other room.  (SING Soundtrack)  There is about <b>10+</b> kids running aroung the living room and outside.  Earlier, Sarah got up in front of church to say good-bye to everyone since it's <u>her last Sunday</u> there.  Tomorrow is her last youth meeting . . . I think.  GCEs start tomorrow, so here's a prayer that everyone will do well.
+			<p>
+		</div>
+		<div class="wrap-list">
+			<ol>
+				<li class="stories"> Nimhara/Fairyland/Bodacia </li>
+				<li class="stories"> WWD </li>
+				<li class="stories"> Slave Manners </li>
+			</ol>
+		</div>
+		<div class="wrap-trivia">
+			<h2>World Cup Trivia Question</h2>
+			<p> Who won the World Cup in 2004? </p>
+			<form>
+				<div id="response"> </div>
+				<input type="radio" name="soccer trivia" value="no">Italy<br>
+				<input type="radio" name="soccer trivia" value="yes">Spain<br>
+				<input type="radio" name="soccer trivia" value="no">Brazil<br>
+				<input type="radio" name="soccer trivia" value="no">Argentina<br>
+				<input type="button" value="Submit" id="button"  onclick="answer()">
+			</form>
+		</div>
+		<hr>
+		<center> Aletheia Kate Spangler <a href="http://markandjess.com">My Parent's Website</a> </center>
+		<footer>By Ali Spangler</footer>
+	</body> 
+</html>
